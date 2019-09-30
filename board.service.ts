@@ -30,4 +30,18 @@ export class BoardService {
   private aboveFloor(y: number): boolean {
     return y >= 0 && y <= ROWS;
   }
+
+  rotate45(p: IPiece): IPiece {
+    let clone: IPiece = JSON.parse(JSON.stringify(p));
+
+    for (let y = 0; y < p.shape.length; y++) {
+      for (let x = 0; x < y; x++) {
+        const temp = clone.shape[y][x];
+        clone.shape[y][x] = clone.shape[x][y];
+        clone.shape[x][y] = temp;
+      }
+    }
+
+    return clone;
+  }
 }

@@ -40,7 +40,8 @@ export class GameBoardComponent implements OnInit {
     [KEY.LEFT]: (p: IPiece): IPiece => ({ ...p, x: p.x - 1 }),
     [KEY.RIGHT]: (p: IPiece): IPiece => ({ ...p, x: p.x + 1 }),
     [KEY.DOWN]: (p: IPiece): IPiece => ({ ...p, y: p.y + 1 }),
-    [KEY.SPACE]: (p: IPiece): IPiece => ({ ...p, y: p.y + 1 })
+    [KEY.SPACE]: (p: IPiece): IPiece => ({ ...p, y: p.y + 1 }),
+    [KEY.UP]: (p: IPiece): IPiece => this.boardService.rotate45(p)
   }
 
   constructor(private boardService: BoardService) { }

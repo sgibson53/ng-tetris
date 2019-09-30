@@ -4,6 +4,7 @@ export class KEY {
   static readonly RIGHT = 39;
   static readonly DOWN = 40;
   static readonly SPACE = 32;
+  static readonly UP = 38;
 }
 
 export interface IPiece {
