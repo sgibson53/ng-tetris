@@ -1,0 +1,25 @@
+.grid {
+  display: flex;
+  padding: 20px;
+}
+
+.game-board {
+  border: 1px solid black;
+}
+
+.right-column {
+  padding: 0 10px;
+}
+
+.right-column div * {
+  margin-bottom: 10px;
+}
+
+button {
+  width: 100px;
+  line-height: 26px;
+  height: 30px;
+  background: #009200;
+  box-shadow: black 1px 2px 5px;
+}
+
